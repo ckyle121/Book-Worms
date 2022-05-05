@@ -1,5 +1,5 @@
 {
-  "name": "googlebooks-app",
+  "name": "book-worms",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -9,10 +9,21 @@
     "install": "cd server && npm i && cd ../client && npm i",
     "build": "cd client && npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckyle121/Book-Worms.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ckyle121/Book-Worms/issues"
+  },
+  "homepage": "https://github.com/ckyle121/Book-Worms#readme",
+  "dependencies": {
+    "if-env": "^1.0.4"
+  },
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^7.1.0"
   }
 }
