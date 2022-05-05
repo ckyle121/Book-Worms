@@ -21,7 +21,7 @@ const resolvers = {
           console.log(args)
             const user = await User.create(args);
             const token = signToken(user);
-            console.log(token);
+            
             return { token, user };
         },
         login: async (parent, { email, password }) => {
@@ -44,7 +44,7 @@ const resolvers = {
             if (context.user) {
               const updatedUser = await User.findOneAndUpdate(
                 { _id: context.user._id },
-                { $push: { savedBooks: args.input } },
+                { $addToSet: { savedBooks: args.input } },
                 { new: true, runValidators: true }
               );
       
@@ -57,7 +57,7 @@ const resolvers = {
             if (context.user) {
               const updatedUser = await User.findOneAndUpdate(
                 { _id: context.user._id },
-                { $pull: { savedBooks: {bookId: args.bookId } } },
+                { $pull: { savedBooks: { bookId: args.bookId } } },
                 { new: true, runValidators: true }
               );
       
