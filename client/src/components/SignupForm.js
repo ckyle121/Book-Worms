@@ -22,7 +22,7 @@ const SignupForm = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
+    console.log("SUBMITED")
     // check if form has everything (as per react-bootstrap docs)
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -35,7 +35,7 @@ const SignupForm = () => {
       
       Auth.login(data.addUser.token);
 
-    } catch (error) { console.log("HEY")
+    } catch (error) { 
       console.error(error);
       setShowAlert(true);
     }
