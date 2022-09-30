@@ -22,7 +22,8 @@
   "homepage": "https://github.com/ckyle121/Book-Worms#readme",
   "dependencies": {
     "apollo-server-express": "^3.7.0",
-    "if-env": "^1.0.4"
+    "if-env": "^1.0.4",
+    "serve": "^14.0.1"
   },
   "devDependencies": {
     "concurrently": "^7.1.0"
